@@ -1,0 +1,15 @@
+<form>
+  <div class="form-group">
+      <input type="email" [(ngModel)]="registerData.email" name="email" class="form-control" placeholder="Enter Your Email" required>
+  </div>
+  <div class="form-group">
+    <input type="text" [(ngModel)]="registerData.name" name="name" class="form-control" placeholder="Enter Your Name" required>
+</div>
+<div class="form-group">
+  <input type="text" [(ngModel)]="registerData.description" name="description" class="form-control" placeholder="Enter Your Description" required>
+</div>
+<div class="form-group">
+  <input type="password" [(ngModel)]="registerData.pwd" name="pwd" class="form-control" placeholder="Enter Your Password" required>
+</div>
+<button id="btnRegister" class="btn btn-lg btn-primary btn-block" (click)="post()">Register</button>
+</form>

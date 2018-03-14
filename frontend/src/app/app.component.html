@@ -1,0 +1,15 @@
+<!--Sayfa yönlendirmeleri yaparekn app.module'e router componentini register ediyoruz-->
+<!--App module'e route tanımlarını yapmamız ve app'i register etmemiz gerekiyor-->
+<!--This is a comment. Comments are not displayed in the browser-->
+<!--This is a comment. Comments are not displayed in the browser-->
+
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" *ngIf="!authService.isAuthenticated"  [routerLink]="['/register']">Register</a>
+    <a class="p-2 text-dark" *ngIf="authService.isAuthenticated" (click)="logOut()">Logout</a>
+  </nav>
+  <a class="btn btn-outline-primary" *ngIf="!authService.isAuthenticated"  [routerLink]="['/login']">Sign in</a>
+</div>
+<router-outlet></router-outlet>

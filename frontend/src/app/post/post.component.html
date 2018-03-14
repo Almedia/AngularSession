@@ -1,0 +1,10 @@
+<div *ngIf="errorMessage"  class="alert alert-danger" role="alert">
+     {{errorMessage}}
+</div>
+
+<form>
+    <div class="form-group">
+        <input type="text" [(ngModel)]="postMsg" name="postMsg" class="form-control" placeholder="How do you feel bro" required>
+    </div>
+    <button id="btnPost" class="btn btn-lg btn-primary btn-block" (click)="PostMessage()">Post</button>
+    </form>
